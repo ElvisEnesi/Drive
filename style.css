@@ -265,7 +265,7 @@ body::-webkit-scrollbar {
 .body_wrapper .services .service_container .service_image_container .service_details {
     position: absolute;
     background-color: transparent;
-    z-index: 99999;
+    z-index: 99;
     top: 5%;
     left: 10%;
 }
