@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login_container">
+        <img src="./images/usage/higway.jpg" alt="">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h2>Create an account</h2>
+            <span>Already have an account? <a href="">login</a></span>
+            <div class="input_wrapper">
+                <input type="text" name="firstname" placeholder="First name">
+                <input type="text" name="lastname" placeholder="Last name">
+            </div>
+            <input type="email" name="email" placeholder="Your email">
+            <input type="password" name="password" id="password" placeholder="Your password">
+            <div class="checkbox_wrapper">
+                <input type="checkbox" id="show_password">
+                <span class="check">Show password</span>
+            </div>
+            <div class="checkbox_wrapper">
+                <input type="checkbox" name="terms">
+                <span class="check">I agree to the <a href="">terms & conditions</a></span>
+            </div>
+            <button type="submit" name="register">Register</button>
+            <div class="form_divider">
+                <hr>
+                <span>Or register with</span>
+                <hr>
+            </div>
+            <div class="input_wrapper">
+                <button><div class="logo"><img src="./images/logo/google.png" alt=""></div> Google</button>
+                <button><div class="logo"><img src="./images/logo/apple.png" alt=""></div> Apple</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

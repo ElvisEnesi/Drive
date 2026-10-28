@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTECH Campus Transit | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="Overview">
+          <div class="brand-mark"><i data-lucide="bus-front"></i></div>
+          <div><strong>CUSTECH</strong><span>CAMPUS TRANSIT</span></div>
+        </a>
+
+        <div class="campus-switch">
+          <div class="campus-avatar">CT</div>
+          <div class="campus-name"><strong>Transit Admin</strong><span>Osara Campus</span></div>
+          <i data-lucide="chevrons-up-down"></i>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="main-nav">
+          <button class="nav-link active" data-page="Overview"><i data-lucide="layout-dashboard"></i><span>Overview</span></button>
+          <button class="nav-link" data-page="Track rides"><i data-lucide="map-pinned"></i><span>Track rides</span><span class="nav-pill live">LIVE</span></button>
+          <button class="nav-link" data-page="Order a ride"><i data-lucide="plus-circle"></i><span>Order a ride</span></button>
+          <button class="nav-link" data-page="Ride requests"><i data-lucide="bell-ring"></i><span>Ride requests</span><span class="count">8</span></button>
+          <button class="nav-link" data-page="All rides"><i data-lucide="route"></i><span>All rides</span></button>
+          <button class="nav-link" data-page="Past rides"><i data-lucide="history"></i><span>Past rides</span></button>
+
+          <div class="nav-label">PEOPLE</div>
+          <button class="nav-link" data-page="Drivers"><i data-lucide="contact-round"></i><span>Drivers</span></button>
+          <button class="nav-link" data-page="Students & clients"><i data-lucide="users"></i><span>Students & clients</span></button>
+          <button class="nav-link" data-page="Admins & staff"><i data-lucide="shield-check"></i><span>Admins & staff</span></button>
+
+          <div class="nav-label">TRANSPORT OPERATIONS</div>
+          <button class="nav-link" data-page="Routes & stops"><i data-lucide="signpost"></i><span>Routes & stops</span></button>
+          <button class="nav-link" data-page="Fleet & vehicles"><i data-lucide="bus"></i><span>Fleet & vehicles</span></button>
+          <button class="nav-link" data-page="Schedules"><i data-lucide="calendar-clock"></i><span>Schedules</span></button>
+
+          <div class="nav-label">FINANCE & SUPPORT</div>
+          <button class="nav-link" data-page="Payments"><i data-lucide="wallet"></i><span>Payments</span></button>
+          <button class="nav-link" data-page="Reports"><i data-lucide="chart-no-axes-combined"></i><span>Reports & analytics</span></button>
+          <button class="nav-link" data-page="Support"><i data-lucide="messages-square"></i><span>Support tickets</span></button>
+          <button class="nav-link" data-page="Settings"><i data-lucide="settings-2"></i><span>Settings</span></button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-icon"><i data-lucide="life-buoy"></i></div>
+            <strong>Need a hand?</strong>
+            <p>Visit the admin help centre for assistance.</p>
+            <button data-page="Support">Open help centre <i data-lucide="arrow-up-right"></i></button>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">AD</div>
+            <div class="profile-text"><strong>Transit Admin</strong><span>Administrator</span></div>
+            <button class="icon-button" aria-label="Profile menu"><i data-lucide="ellipsis"></i></button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="menuToggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+          <div class="breadcrumb"><span>Workspace</span><i data-lucide="chevron-right"></i><strong id="breadcrumbCurrent">Overview</strong></div>
+          <div class="topbar-actions">
+            <div class="system-status"><span></span> All systems operational</div>
+            <button class="icon-button notification-button" aria-label="Notifications"><i data-lucide="bell"></i><b></b></button>
+            <div class="top-avatar">AD</div>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">TUESDAY, 28 OCTOBER 2026</div>
+              <h1 id="pageTitle">Campus overview <span class="wave">✦</span></h1>
+              <p id="pageSubtitle">Here's what's happening across CUSTECH Campus Transit today.</p>
+            </div>
+            <div class="heading-actions">
+              <button class="btn btn-light" id="exportBtn"><i data-lucide="download"></i> Export report</button>
+              <button class="btn btn-primary" data-page="Order a ride"><i data-lucide="plus"></i> New ride</button>
+            </div>
+          </div>
+
+          <div class="notice-bar">
+            <div class="notice-symbol"><i data-lucide="calendar-check"></i></div>
+            <div><strong>Welcome to your transit command centre</strong><p>Review incoming requests, monitor trips, and manage your campus transport operations.</p></div>
+            <button class="notice-link" data-page="Ride requests">Review requests <i data-lucide="arrow-right"></i></button>
+            <button class="notice-close" aria-label="Dismiss notice"><i data-lucide="x"></i></button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-top"><span>Total rides today</span><span class="stat-icon blue"><i data-lucide="route"></i></span></div>
+              <div class="stat-value">248</div><div class="stat-foot"><span class="trend up"><i data-lucide="trending-up"></i> 12.8%</span><span>vs. yesterday</span></div>
+              <div class="sparkline blue-line"><span style="height:35%"></span><span style="height:48%"></span><span style="height:42%"></span><span style="height:62%"></span><span style="height:52%"></span><span style="height:72%"></span><span style="height:60%"></span><span style="height:88%"></span><span style="height:70%"></span><span style="height:100%"></span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Active rides</span><span class="stat-icon gold"><i data-lucide="map-pin"></i></span></div>
+              <div class="stat-value">36</div><div class="stat-foot"><span class="trend up">● Live</span><span>currently on the road</span></div>
+              <div class="sparkline gold-line"><span style="height:55%"></span><span style="height:42%"></span><span style="height:70%"></span><span style="height:60%"></span><span style="height:85%"></span><span style="height:67%"></span><span style="height:76%"></span><span style="height:90%"></span><span style="height:74%"></span><span style="height:100%"></span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Pending requests</span><span class="stat-icon orange"><i data-lucide="clock-3"></i></span></div>
+              <div class="stat-value">08</div><div class="stat-foot"><span class="trend warning">Needs attention</span><span>awaiting assignment</span></div>
+              <div class="stat-progress"><div style="width:64%"></div></div><div class="progress-caption"><span>Response queue</span><strong>64%</strong></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Payments collected</span><span class="stat-icon green"><i data-lucide="wallet"></i></span></div>
+              <div class="stat-value">₦486,500</div><div class="stat-foot"><span class="trend up"><i data-lucide="trending-up"></i> 8.4%</span><span>vs. yesterday</span></div>
+              <div class="stat-progress green-progress"><div style="width:76%"></div></div><div class="progress-caption"><span>Daily target</span><strong>76%</strong></div>
+            </article>
+          </div>
+
+          <div class="content-grid">
+            <section class="panel rides-panel">
+              <div class="panel-heading"><div><h2>Recent rides</h2><p>Monitor the latest campus journeys.</p></div><button class="text-link" data-page="All rides">View all <i data-lucide="arrow-up-right"></i></button></div>
+              <div class="table-toolbar"><div class="search-box"><i data-lucide="search"></i><input type="search" id="rideSearch" placeholder="Search ride, passenger or driver..."></div><button class="btn btn-light btn-small" id="filterBtn"><i data-lucide="list-filter"></i> All statuses</button></div>
+              <div class="table-wrap"><table id="ridesTable">
+                <thead><tr><th>RIDE ID</th><th>PASSENGER / DRIVER</th><th>ROUTE</th><th>FARE</th><th>STATUS</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td class="ride-id">CT-0248</td><td><div class="person-cell"><div class="person-avatar avatar-a">OA</div><div><strong>Oluwaseun Ade</strong><small>Driver: Musa Bello</small></div></div></td><td><span class="route-name">Main Gate → Library</span><small class="route-sub">Campus loop · 1.2 km</small></td><td class="fare">₦800</td><td><span class="status status-progress">In progress</span></td><td><button class="row-action" aria-label="Ride details"><i data-lucide="arrow-up-right"></i></button></td></tr>
+                  <tr><td class="ride-id">CT-0247</td><td><div class="person-cell"><div class="person-avatar avatar-b">FA</div><div><strong>Fatima Ahmed</strong><small>Driver: Daniel Okoro</small></div></div></td><td><span class="route-name">Hostel A → Lecture Hall</span><small class="route-sub">Academic route · 2.1 km</small></td><td class="fare">₦1,000</td><td><span class="status status-complete">Completed</span></td><td><button class="row-action" aria-label="Ride details"><i data-lucide="arrow-up-right"></i></button></td></tr>
+                  <tr><td class="ride-id">CT-0246</td><td><div class="person-cell"><div class="person-avatar avatar-c">IM</div><div><strong>Ibrahim Musa</strong><small>Driver: Unassigned</small></div></div></td><td><span class="route-name">Admin Block → Cafeteria</span><small class="route-sub">Campus loop · 0.8 km</small></td><td class="fare">₦500</td><td><span class="status status-pending">Pending</span></td><td><button class="row-action" aria-label="Ride details"><i data-lucide="arrow-up-right"></i></button></td></tr>
+                  <tr><td class="ride-id">CT-0245</td><td><div class="person-cell"><div class="person-avatar avatar-d">CN</div><div><strong>Chidinma Nwosu</strong><small>Driver: Grace Eze</small></div></div></td><td><span class="route-name">Library → Main Gate</span><small class="route-sub">Campus loop · 1.2 km</small></td><td class="fare">₦800</td><td><span class="status status-cancelled">Cancelled</span></td><td><button class="row-action" aria-label="Ride details"><i data-lucide="arrow-up-right"></i></button></td></tr>
+                </tbody>
+              </table></div>
+              <div class="panel-footer"><span>Showing <strong id="shownCount">4</strong> of 248 rides</span><button class="pagination-button" aria-label="Previous page"><i data-lucide="chevron-left"></i></button><button class="pagination-button current-page">1</button><button class="pagination-button" aria-label="Next page"><i data-lucide="chevron-right"></i></button></div>
+            </section>
+
+            <section class="panel requests-panel">
+              <div class="panel-heading"><div><h2>Ride requests</h2><p>Requests waiting for review.</p></div><span class="request-count">08 pending</span></div>
+              <div class="request-list">
+                <article class="request-item"><div class="request-top"><div class="person-cell"><div class="person-avatar avatar-e">EK</div><div><strong>Emeka Kingsley</strong><small>Student · CT-0249</small></div></div><span class="status status-pending">New</span></div><div class="request-route"><span><i data-lucide="circle-dot"></i> Student Hostel</span><i data-lucide="arrow-down"></i><span><i data-lucide="map-pin"></i> Science Block</span></div><div class="request-bottom"><span>Now · Est. ₦700</span><div><button class="decline-btn request-action" data-action="decline">Decline</button><button class="accept-btn request-action" data-action="accept">Accept</button></div></div></article>
+                <article class="request-item"><div class="request-top"><div class="person-cell"><div class="person-avatar avatar-f">ZI</div><div><strong>Zainab Ibrahim</strong><small>Student · CT-0250</small></div></div><span class="status status-pending">New</span></div><div class="request-route"><span><i data-lucide="circle-dot"></i> Main Gate</span><i data-lucide="arrow-down"></i><span><i data-lucide="map-pin"></i> Female Hostel</span></div><div class="request-bottom"><span>In 15 min · Est. ₦900</span><div><button class="decline-btn request-action" data-action="decline">Decline</button><button class="accept-btn request-action" data-action="accept">Accept</button></div></div></article>
+                <article class="request-item"><div class="request-top"><div class="person-cell"><div class="person-avatar avatar-g">TO</div><div><strong>Tunde Oladipo</strong><small>Staff · CT-0251</small></div></div><span class="status status-pending">New</span></div><div class="request-route"><span><i data-lucide="circle-dot"></i> Admin Block</span><i data-lucide="arrow-down"></i><span><i data-lucide="map-pin"></i> Main Gate</span></div><div class="request-bottom"><span>In 20 min · Est. ₦600</span><div><button class="decline-btn request-action" data-action="decline">Decline</button><button class="accept-btn request-action" data-action="accept">Accept</button></div></div></article>
+              </div>
+              <div class="requests-footer"><button class="btn btn-light full-width" data-page="Ride requests">View all requests <i data-lucide="arrow-right"></i></button></div>
+            </section>
+          </div>
+
+          <div class="bottom-grid">
+            <section class="panel routes-panel">
+              <div class="panel-heading"><div><h2>Popular campus routes</h2><p>Most used routes today.</p></div><button class="text-link" data-page="Routes & stops">Manage routes <i data-lucide="arrow-up-right"></i></button></div>
+              <div class="route-row"><div class="route-icon"><i data-lucide="bus-front"></i></div><div class="route-info"><strong>Main Gate — Library</strong><span>Route 01 · 1.2 km</span></div><div class="route-usage"><strong>86 rides</strong><div class="mini-bar"><span style="width:86%"></span></div></div></div>
+              <div class="route-row"><div class="route-icon gold-route"><i data-lucide="graduation-cap"></i></div><div class="route-info"><strong>Hostel — Lecture Hall</strong><span>Route 02 · 2.1 km</span></div><div class="route-usage"><strong>64 rides</strong><div class="mini-bar"><span style="width:64%"></span></div></div></div>
+              <div class="route-row"><div class="route-icon green-route"><i data-lucide="coffee"></i></div><div class="route-info"><strong>Admin Block — Cafeteria</strong><span>Route 03 · 0.8 km</span></div><div class="route-usage"><strong>42 rides</strong><div class="mini-bar"><span style="width:42%"></span></div></div></div>
+            </section>
+            <section class="panel fleet-panel">
+              <div class="panel-heading"><div><h2>Fleet availability</h2><p>Vehicle status overview.</p></div><button class="text-link" data-page="Fleet & vehicles">View fleet <i data-lucide="arrow-up-right"></i></button></div>
+              <div class="fleet-summary"><div class="fleet-total"><strong>42</strong><span>Total vehicles</span></div><div class="fleet-legend"><span><i class="dot dot-green"></i> Available <strong>24</strong></span><span><i class="dot dot-blue"></i> On trip <strong>12</strong></span><span><i class="dot dot-gold"></i> Maintenance <strong>6</strong></span></div></div>
+              <div class="fleet-bar"><span class="fleet-available"></span><span class="fleet-active"></span><span class="fleet-maintenance"></span></div>
+              <button class="btn btn-light full-width" data-page="Schedules"><i data-lucide="calendar-days"></i> View vehicle schedules</button>
+            </section>
+          </div>
+          <footer class="page-footer"><span>© 2026 CUSTECH Campus Transit</span><span>Built for safer campus journeys <i data-lucide="heart"></i></span></footer>
+        </section>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+</body>
+</html>
