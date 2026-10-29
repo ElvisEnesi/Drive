@@ -485,18 +485,6 @@ body::-webkit-scrollbar {
 }
 /* dashboard */
 
-
-:root {
-  --primary-color: #0B2D5C;
-  --accent-color: #E6A323;
-  --background-color: #FFFFFF;
-  --secondary-background: #F0F1F3;
-  --text-color: #263445;
-  --muted: #7A8493;
-  --border: #E7EAF0;
-  --success: #16845B;
-  --shadow: 0 5px 24px rgba(20, 39, 70, .045);
-}
 * { box-sizing: border-box; }
 body { margin: 0; background: #F7F8FA; color: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; }
 button, input { font: inherit; }
